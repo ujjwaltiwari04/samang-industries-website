@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samang Industries - Premium Industrial Oils & Lubricants</title>
+    <meta name="description" content="Samang Industries - 15+ years of excellence in industrial oils, cutting oils, hydraulic oils & lubricants. Trusted by Hero MotoCorp. Premium quality, competitive prices.">
+    <meta name="keywords" content="industrial oils, cutting oil, hydraulic oil, lubricants, rust preventive oil, industrial tools, Gurugram">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 32, 46, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 0.8rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><radialGradient id="sunGrad" cx="50%" cy="60%" r="40%"><stop offset="0%" style="stop-color:%23D2691E"/><stop offset="100%" style="stop-color:%238B4513"/></radialGradient></defs><g transform="translate(200,180)"><path d="M-15,-50 L-5,-15 Q0,-10 5,-15 L15,-50" fill="%238B4513"/><path d="M-35,-35 L-15,-10 Q-10,-5 -5,-10 L-25,-35" fill="%238B4513"/><path d="M-50,-15 L-25,-5 Q-20,0 -15,-5 L-40,-15" fill="%238B4513"/><path d="M-50,15 L-25,5 Q-20,10 -15,5 L-40,15" fill="%238B4513"/><path d="M-35,35 L-15,10 Q-10,15 -5,10 L-25,35" fill="%238B4513"/><path d="M-15,50 L-5,15 Q0,20 5,15 L15,50" fill="%238B4513"/><path d="M15,50 L5,15 Q10,20 15,15 L35,50" fill="%238B4513"/><path d="M35,35 L15,10 Q20,15 25,10 L45,35" fill="%238B4513"/><path d="M50,15 L25,5 Q30,10 35,5 L60,15" fill="%238B4513"/><path d="M50,-15 L25,-5 Q30,-10 35,-5 L60,-15" fill="%238B4513"/><path d="M35,-35 L15,-10 Q20,-15 25,-10 L45,-35" fill="%238B4513"/><path d="M15,-50 L5,-15 Q10,-20 15,-15 L35,-50" fill="%238B4513"/><circle cx="0" cy="0" r="25" fill="url(%23sunGrad)" stroke="%238B4513" stroke-width="2"/></g><text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="%23333">समृद्धि</text></svg>') center/contain no-repeat;
+        }
+
+        .logo-text {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #D2691E;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D2691E;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1a202e 0%, #2d3748 50%, #4a5568 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(210,105,30,0.1)"/><stop offset="100%" style="stop-color:rgba(210,105,30,0)"/></radialGradient></defs><circle cx="150" cy="150" r="2" fill="white" opacity="0.3"/><circle cx="850" cy="200" r="1.5" fill="white" opacity="0.4"/><circle cx="300" cy="700" r="2" fill="white" opacity="0.3"/><circle cx="750" cy="800" r="2.5" fill="white" opacity="0.2"/><circle cx="500" cy="300" r="1" fill="white" opacity="0.5"/></svg>') repeat;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(180deg); }
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: slideInUp 1s ease-out;
+            background: linear-gradient(45deg, #fff, #D2691E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: slideInUp 1s ease-out 0.2s both;
+            color: #D2691E;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.4s both;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(210, 105, 30, 0.4);
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(210, 105, 30, 0.6);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #D2691E;
+            color: #D2691E;
+        }
+
+        .cta-button.secondary:hover {
+            background: #D2691E;
+            color: white;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            display: none;
+            min-height: 100vh;
+            padding: 120px 2rem 80px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #1a202e;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a202e;
+            font-weight: 600;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #fff, #f8f9fa);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #D2691E;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Products Section */
+        .products-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 5px solid #D2691E;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+        }
+
+        .product-card h3 {
+            font-size: 1.6rem;
+            color: #1a202e;
+            font-weight: 600;
+        }
+
+        .product-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #D2691E;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, #1a202e, #2d3748);
+            color: white;
+            border-radius: 20px;
+        }
+
+        .contact-hero h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #1a202e, #2d3748);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            height: fit-content;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #D2691E;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #D2691E;
+        }
+
+        .contact-details p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #D2691E;
+            box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #D2691E, #CD853F);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(210, 105, 30, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Success/Error Messages */
+        .form-message {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(26, 32, 46, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                backdrop-filter: blur(15px);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 100px 1rem 60px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-form,
+            .contact-info {
+                padding: 2rem;
+            }
+
+            .product-card {
+                padding: 2rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-img"></div>
+                <a href="#" class="logo-text">Samang Industries</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('products')">Products</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero section active">
+        <div class="hero-content">
+            <h1>Premium Industrial Oils</h1>
+            <p class="subtitle">15+ Years of Excellence in Industrial Lubrication</p>
+            <p>Trusted by industry leaders like Hero MotoCorp for cutting-edge lubrication solutions. We deliver premium quality industrial oils with competitive pricing and exceptional after-sales service.</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button" onclick="showSection('contact')">Get Quote Now</a>
+                <a href="#" class="cta-button secondary" onclick="showSection('products')">View Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Samang Industries</h2>
+            <p class="section-subtitle">Your trusted partner in industrial lubrication solutions with over 15 years of industry expertise</p>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Industry Leadership Since 2009</h3>
+                    <p>Samang Industries has established itself as a premier supplier of high-quality industrial oils and lubricants in the Gurugram region and beyond. With over 15 years of dedicated service, we have built lasting relationships with major corporations including Hero MotoCorp.</p>
+                    <p>Our commitment to topmost quality, competitive pricing, and comprehensive after-sales service has made us the preferred choice for industrial lubrication needs across various sectors.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Premium Quality Products</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Competitive Pricing</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Expert Technical Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>After-Sales Service</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Reliable Supply Chain</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Industry Expertise</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <h3>Our Mission</h3>
+                    <p>To deliver superior industrial oil solutions that enhance operational efficiency, reduce maintenance costs, and extend equipment life. We are committed to innovation, quality excellence, and building long-term partnerships that drive industrial success.</p>
+                    
+                    <h3>Why Choose Samang Industries?</h3>
+                    <p>Our comprehensive approach combines high-quality products with expert knowledge and reliable service. We understand the critical role that proper lubrication plays in industrial operations and are dedicated to providing solutions that keep your machinery running at peak performance.</p>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Satisfied Clients</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Product Variants</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Product Range</h2>
+            <p class="section-subtitle">Comprehensive industrial lubrication solutions for all your operational needs</p>
+            
+            <div class="products-intro">
+                <h3>Complete Industrial Oil Solutions</h3>
+                <p>From cutting-edge machining operations to heavy-duty hydraulic systems, our comprehensive range of industrial oils and tools ensures optimal performance across all applications. Each product is carefully selected and tested to meet the highest industry standards.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🔧</div>
+                        <h3>Semi-Synthetic Cutting Oil</h3>
+                    </div>
+                    <p>Advanced semi-synthetic cutting oils designed for precision machining operations. Provides excellent cooling, lubrication, and surface finish quality.</p>
+                    <ul class="product-features">
+                        <li>Superior cooling properties</li>
+                        <li>Extended tool life</li>
+                        <li>Excellent surface finish</li>
+                        <li>Low foam formation</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">⚙️</div>
+                        <h3>Traditional Cutting Oil</h3>
+                    </div>
+                    <p>High-performance traditional cutting oils for heavy-duty machining operations. Ideal for operations requiring maximum lubrication and tool protection.</p>
+                    <ul class="product-features">
+                        <li>Maximum lubrication</li>
+                        <li>Heavy-duty protection</li>
+                        <li>Corrosion resistance</li>
+                        <li>Cost-effective solution</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🔩</div>
+                        <h3>Hydraulic Oil</h3>
+                    </div>
+                    <p>Premium hydraulic fluids engineered for optimal performance in hydraulic systems. Maintains viscosity stability under extreme conditions.</p>
+                    <ul class="product-features">
+                        <li>Superior wear protection</li>
+                        <li>Anti-foam properties</li>
+                        <li>Thermal stability</li>
+                        <li>Long service life</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">⚡</div>
+                        <h3>Industrial Lubrication Oil</h3>
+                    </div>
+                    <p>Comprehensive range of industrial lubricants for gears, bearings, chains, and other critical components. Formulated for extreme conditions.</p>
+                    <ul class="product-features">
+                        <li>Heavy load capacity</li>
+                        <li>Temperature resistance</li>
+                        <li>Equipment protection</li>
+                        <li>Reduced maintenance</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🛡️</div>
+                        <h3>Rust Preventive Oil</h3>
+                    </div>
+                    <p>Advanced rust prevention solutions that provide long-lasting protection for metal surfaces during storage and transportation.</p>
+                    <ul class="product-features">
+                        <li>Long-term protection</li>
+                        <li>Easy application</li>
+                        <li>Non-toxic formulation</li>
+                        <li>Indoor/outdoor use</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🧽</div>
+                        <h3>Rust Removal Oil</h3>
+                    </div>
+                    <p>Powerful rust removal solutions that effectively eliminate existing rust while protecting against future corrosion.</p>
+                    <ul class="product-features">
+                        <li>Fast-acting formula</li>
+                        <li>Deep penetration</li>
+                        <li>Surface restoration</li>
+                        <li>Protective coating</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🔨</div>
+                        <h3>Industrial Tools & Equipment</h3>
+                    </div>
+                    <p>Complete range of industrial tools and safety equipment including protective gloves, packaging materials, and application tools.</p>
+                    <ul class="product-features">
+                        <li>Safety equipment</li>
+                        <li>Application tools</li>
+                        <li>Packaging solutions</li>
+                        <li>Quality assurance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to enhance your industrial operations? Contact us for expert consultation and competitive quotes</p>
+            
+            <div class="contact-hero">
+                <h3>Let's Discuss Your Requirements</h3>
+                <p>Our team of experts is ready to help you find the perfect lubrication solution for your specific needs. Get in touch today for personalized service and competitive pricing.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p>weebprocastinator@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone Number</h4>
+                            <p>+91 8586097283</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Office Address</h4>
+                            <p>Plot no. 36A, Street 5<br>Om Vihar -1, Gurugram<br>Haryana, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div id="formMessage" class="form-message"></div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product">Product Interest</label>
+                        <select id="product" name="product">
+                            <option value="">Select a product category</option>
+                            <option value="Semi-Synthetic Cutting Oil">Semi-Synthetic Cutting Oil</option>
+                            <option value="Traditional Cutting Oil">Traditional Cutting Oil</option>
+                            <option value="Hydraulic Oil">Hydraulic Oil</option>
+                            <option value="Industrial Lubrication Oil">Industrial Lubrication Oil</option>
+                            <option value="Rust Preventive Oil">Rust Preventive Oil</option>
+                            <option value="Rust Removal Oil">Rust Removal Oil</option>
+                            <option value="Industrial Tools">Industrial Tools & Equipment</option>
+                            <option value="Multiple Products">Multiple Products</option>
+                            <option value="Consultation">General Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Please describe your requirements, quantities needed, or any specific questions you have..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navigation functionality
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Close mobile menu if open
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Formspree form submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.submit-btn');
+            const formMessage = document.getElementById('formMessage');
+            const form = e.target;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mkgzvrqj', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Thank you! Your message has been sent successfully. We will get back to you within 24 hours.';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly.';
+                formMessage.style.display = 'block';
+            }
+            
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Smooth scrolling and responsive enhancements
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(26, 32, 46, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(26, 32, 46, 0.95)';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (!navMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Add smooth transitions when switching sections
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetSection = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                showSection(targetSection);
+            });
+        });
+    </script>
+</body>
+</html>
